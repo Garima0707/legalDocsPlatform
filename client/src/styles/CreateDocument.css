@@ -1,0 +1,148 @@
+/* CreateDocument.css */
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: center;
+}
+
+/* Close button */
+.cclose-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.cclose-button:hover {
+  color: #e74c3c;
+}
+
+/* Heading */
+h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* Form inputs */
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* Select dropdown */
+select {
+  cursor: pointer;
+}
+
+/* Buttons */
+.button-group {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.submit-button,
+.content-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button {
+  background-color: #f9a30e;
+  color: #fff;
+}
+
+.submit-button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #f9a30e;
+}
+
+.content-button {
+  background-color: #f9a30e;
+  color: #fff;
+}
+
+.content-button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.content-button:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+/* Error message */
+p {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .popup-content {
+    padding: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .submit-button,
+  .content-button {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+}

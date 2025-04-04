@@ -1,0 +1,192 @@
+/* Main Section Styles */
+.Problem-Solution {
+  height: 400px;
+  width: 100%;
+  padding: 4rem 2rem;
+  background: #0D1F2D;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.problem-solution-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem;
+  color: #fff;
+}
+
+/* GIF Container Styles */
+.gif-container {
+  flex: 0 0 auto;
+  width: 200px; 
+  height: 300px;
+  border-radius: 1rem;
+  align-self: start;
+  overflow: hidden;
+}
+
+.gif-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Cards Container Styles */
+.pcards-container {
+  display: grid; /* Use grid for arranging cards */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 2rem; /* Add spacing between cards */
+  flex: 1; /* Allow cards container to take remaining space */
+}
+
+/* Card Styles */
+.pcard {
+  position: relative;
+  height: 300px;
+  perspective: 1500px;
+  cursor: pointer;
+  width: 70%;
+}
+
+.pcard-face {
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.pcard-front {
+  background: #f9a30e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.pcard-back {
+  background: linear-gradient(135deg, #f7c062 0%, #f9a30e 100%);
+  color: white;
+  transform: rotateY(180deg);
+  overflow-y: auto;
+}
+
+.pcard.flipped .pcard-front {
+  transform: rotateY(180deg);
+}
+
+.pcard.flipped .pcard-back {
+  transform: rotateY(360deg);
+}
+
+/* Typography Styles */
+.pcard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #0D1F2D;
+}
+
+.pcard-front h3 {
+  color: #fff;
+  font-size: 30px;
+}
+
+.pcard-front p {
+  color: #0D1F2D;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.pcard-back p {
+  white-space: pre-line;
+  line-height: 1.8;
+  color: #0D1F2D;
+}
+
+/* Hover Effects */
+.pcard:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+.pcard-face:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Animation for Card Entry */
+@keyframes cardEntry {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pcard {
+  animation: cardEntry 0.6s ease-out forwards;
+  animation-delay: calc(var(--card-index) * 0.1s);
+}
+
+/* Scrollbar Styling for Card Back */
+.pcard-back::-webkit-scrollbar {
+  width: 6px;
+}
+
+.pcard-back::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.pcard-back::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .Problem-Solution {
+    padding: 3rem 1rem;
+  }
+
+  .pcards-container {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .pcard {
+    height: 250px;
+  }
+
+  .pcard-face {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gif-container {
+    max-width: 100%;
+  }
+
+  .pcard h3 {
+    font-size: 1.25rem;
+  }
+
+  .pcard p {
+    font-size: 0.9rem;
+  }
+}

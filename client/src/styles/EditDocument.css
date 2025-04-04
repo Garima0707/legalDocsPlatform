@@ -1,0 +1,272 @@
+/* Document Editor Container */
+.doc-editor-container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: #ded9cf;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  /* Header Styles */
+  .doc-editor-header {
+    margin-bottom: 1.5rem;
+  }
+  
+  .doc-editor-title {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    color: #0D1F2D;
+    margin-bottom: 0.5rem;
+  }
+  
+  .doc-editor-description {
+    color: #19283e;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    margin-bottom: 1rem;
+  }
+  
+  .doc-editor-tags {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .doc-editor-role {
+    background-color: #f9a30e;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    color: #fdfdfe;
+    text-transform: uppercase;
+  }
+  
+  /* Controls */
+  .doc-editor-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .doc-editor-refresh-btn,
+  .doc-editor-settings-btn {
+    padding: 0.5rem;
+    border-radius: 50%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #0D1F2D;
+  }
+  
+  .doc-editor-refresh-btn:hover,
+  .doc-editor-settings-btn:hover {
+    background-color: #f9a30e;
+    color: #fff;
+    transform: scale(1.1);
+  }
+  
+  .doc-editor-icon {
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+  
+  /* Dropdown */
+  .doc-editor-settings {
+    position: relative;
+  }
+  
+  .doc-editor-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 12rem;
+    background-color: white;
+    border: 1px solid #f9a30e;
+    border-radius: 0.375rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 40;
+    margin-top: 0.25rem;
+  }
+  
+  .doc-editor-dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    text-align: left;
+    background: none;
+    border: none;
+    color: #0D1F2D;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .doc-editor-dropdown-item:hover:not(.disabled) {
+    background-color: #f9a30e;
+    color: #fff;
+  }
+  
+  .doc-editor-dropdown-item.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  /* Modal Overlay */
+  .doc-editor-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+    color: #fff;
+  }
+  
+  /* Modal Base Styles */
+  .doc-editor-modal,
+  .doc-editor-cancel-modal,
+  .doc-editor-password-modal,
+  .doc-editor-sign-modal {
+    background-color: #0D1F2D;
+    color: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    width: 90%;
+    max-width: 28rem;
+    position: relative;
+    animation: modalFadeIn 0.3s ease;
+  }
+  
+  @keyframes modalFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .doc-editor-close-btn {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    color:#fff ;
+  }
+  
+  .doc-editor-close-btn:hover {
+    color: #f9a30e;
+  }
+  
+  /* Modal Content Styles */
+  .doc-editor-input-group {
+    margin-bottom: 1rem;
+    color: #0D1F2D;
+  }
+  
+  .doc-editor-input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #f2f4f8;
+    font-size: 10px;
+    font-style: italic;
+  }
+  
+  .doc-editor-input-group input {
+    width: 90%;
+    padding: 0.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.25rem;
+  }
+  
+  .doc-editor-modal-actions {
+    display: flex;
+    gap: 1rem;
+    color: #fff;
+    justify-content:center;
+    margin-top: 1.5rem;
+  }
+  
+  /* Button Styles */
+  .doc-editor-confirm-btn,
+  .doc-editor-password-btn,
+  .doc-editor-generate-btn,
+  .doc-editor-sign-btn {
+    background-color: #f9a30e;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .heading-sign {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .heading-cancel{
+    color: #fff;
+  }
+
+  .subheading-cancel{
+    color: #f9a30e;
+  }
+
+  .heading-share{
+    color: #fff;
+  }
+  .doc-editor-cancel-btn {
+    background-color: #e2e8f0;
+    color: #0D1F2D;
+    font-weight: normal;
+    font-size: 14px;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .doc-editor-confirm-btn:hover,
+  .doc-editor-password-btn:hover,
+  .doc-editor-generate-btn:hover,
+  .doc-editor-sign-btn:hover {
+    background-color: #dd8c00;
+  }
+  
+  .doc-editor-cancel-btn:hover {
+    background-color: #cbd5e0;
+  }
+  
+  /* Link Container */
+  .doc-editor-link-container {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background-color: #f7fafc;
+    border-radius: 0.25rem;
+    word-break: break-all;
+  }
+  
+  .doc-editor-link-container a {
+    color: #f9a30e;
+    text-decoration: none;
+  }
+  
+  .doc-editor-link-container a:hover {
+    text-decoration: underline;
+  }

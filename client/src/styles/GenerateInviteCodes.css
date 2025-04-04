@@ -1,0 +1,274 @@
+/* Overlay for the modal */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Dark semi-transparent overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal container */
+.modal {
+  background:#0D1F2D;
+  border-radius: 12px;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Close button */
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.closeButton:hover {
+  color: #ff4c4c; /* Red for hover */
+}
+
+/* Header styling */
+.modal h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Invitees container */
+.invitees-container {
+  margin-bottom: 20px;
+}
+
+.invitee-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.email-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-right: 10px;
+  font-size: 0.9rem;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.email-input:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.role-select {
+  flex: 0.5;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin-right: 10px;
+  background-color: #f9f9f9;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.role-select:hover {
+  background-color: #f1f1f1;
+}
+
+.remove-button {
+  padding: 8px 12px;
+  background-color: #ff4c4c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.remove-button:hover {
+  background-color: #e43e3e;
+}
+
+/* Add Invitee Button */
+.add-button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #f9a30e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  position: center;
+  margin-left: 80%;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.add-button:hover {
+  background-color: #fdb436;
+}
+
+/* Generate Button */
+.generate-button {
+  display: block;
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #f9a30e;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.generate-button:hover {
+  background-color: #f5ad31;
+}
+
+.generate-button:disabled {
+  background-color: #8a8989;
+  cursor: not-allowed;
+}
+
+/* Table Container */
+.codes-table-container {
+  margin-top: 20px;
+}
+
+.codes-table th, .codes-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.codes-table th {
+  background-color: #f9a30e;
+  color: white;
+  font-weight: bold;
+}
+
+.codes-table td {
+  color: #333;
+}
+
+/* Invite List Button */
+.invite-list-button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #ffc107;
+  color: #333;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.invite-list-button:hover {
+  background-color: #e0a800;
+}
+
+/* Table Container with Side Scroll */
+.codes-table-container {
+  margin-top: 20px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling for touch devices */
+  border: 1px solid #ddd; /* Optional: Add border for container visibility */
+  border-radius: 8px; /* Optional: Rounded edges */
+  padding: 10px;
+  color: #0D1F2D;
+  text-align: center;
+  background-color: #f9f9f9; /* Light background for better table visibility */
+}
+
+/* Styling for the Table */
+.codes-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px; /* Ensure a minimum width for the table */
+  font-size: 0.9rem;
+}
+
+.codes-table th, .codes-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  color:#0D1F2D;
+  text-align: center;
+}
+
+.codes-table th {
+  background-color: #f9a30e;
+  color: white;
+  font-weight: bold;
+}
+
+.codes-table td {
+  color: #0D1F2D;
+}
+
+/* Copy Button Styling */
+.copy-button {
+  padding: 6px 10px;
+  background-color: #0D1F2D;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.copy-button:hover {
+  background-color: #138496;
+}
+
+/* Add horizontal scrollbar styling */
+.codes-table-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.codes-table-container::-webkit-scrollbar-thumb {
+  background-color: #0D1F2D;
+  border-radius: 4px;
+}
+
+.codes-table-container::-webkit-scrollbar-track {
+  background-color: #d3d1d1;
+}

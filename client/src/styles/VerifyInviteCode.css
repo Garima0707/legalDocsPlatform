@@ -1,0 +1,134 @@
+/* VerifyInviteCode.css */
+
+/* Overlay to cover the entire screen when the modal is open */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  /* Modal container */
+  .modal {
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    animation: slideDown 0.3s ease-out;
+    position: relative;
+  }
+  
+  /* Modal header and close button */
+  .modal-content {
+    text-align: center;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.2s ease;
+  }
+  
+  .close-button:hover {
+    color: #ff5555;
+  }
+  
+  /* Modal title */
+  h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* Input fields */
+  .modal-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .modal-input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  /* Buttons */
+  .modal-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .modal-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Document details section */
+  .modal-details {
+    margin-top: 20px;
+    text-align: left;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+  }
+  
+  .modal-details h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .modal-details p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .modal-details ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .modal-details li {
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  /* Animation for the modal */
+  @keyframes slideDown {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

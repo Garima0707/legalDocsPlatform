@@ -1,0 +1,111 @@
+/* src/styles/contactStyles.css */
+.contact {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color:#f9a30e ;
+  }
+  
+  .contact-left,
+  .contact-right {
+    width: 48%;
+  }
+  
+  .contact-left h3 {
+    font-size: 2rem;
+    color: #fff;
+  }
+  
+  .contact-left p {
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  
+  .contact-details {
+    margin-top: 20px;
+  }
+  
+  .contact-details p {
+    font-size: 1rem;
+    color: #0a1f30;
+  }
+  
+  .contact-details a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .contact-details .logo img {
+    width: 150px;
+    height: auto;
+    margin-top: 10px;
+  }
+  
+  .contact-right h3 {
+    font-size: 2rem;
+    color: #0a1f30;
+  }
+  
+  form {
+    background-color: #0D1F2D;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  form label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+    color: #fff;
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  form input:focus,
+  form textarea:focus {
+    border-color: #0a1f30;
+  }
+  
+  form button {
+    background-color: #f9a30e;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1.1rem;
+  }
+  
+  form button:hover {
+    background-color: #081e2e;
+  }
+  
+  .error {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: -0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .contact {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .contact-left,
+    .contact-right {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+  

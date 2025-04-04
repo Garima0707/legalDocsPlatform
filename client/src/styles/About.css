@@ -1,0 +1,81 @@
+/* About Section Styles */
+#about {
+    padding: 40px 0;
+    background-color: #0D1F2D;
+  }
+  
+  #about-sections {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 30px; /* Space between the two sections */
+  }
+  
+  .about-section {
+    flex: 1; /* Equal width for both sections */
+    max-width: 48%; /* Prevent sections from being too wide */
+    display: flex;
+    flex-direction: column; /* Stack text and image vertically */
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Add spacing to position the "Why Us" section lower */
+  #why-us {
+    margin-top: 100px; /* Adjust this value to control the offset */
+  }
+  
+  /* Text Styling */
+  .about-text {
+    width: 100%; /* Make the text section full-width so the image sits below it */
+    text-align: center; /* Center-align text for a balanced look */
+  }
+  
+  .about-text .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  
+  .about-text p {
+    font-size: 1.1rem;
+    color: #aeb9b9;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
+  /* Image Styling */
+  .about-image img {
+    width: 60%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px auto 0;
+    display: block !important;
+    transform: translateX(-50px); /* Start off-screen */
+    opacity: 0;
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+  }
+  
+  /* Apply flip effect on scroll */
+  .about-section.visible .about-image img {
+    transform: translateX(0); /* Slide back in */
+  opacity: 1; /* Make it visible */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    #about-sections {
+      flex-direction: column; /* Stack sections vertically on smaller screens */
+      gap: 20px;
+    }
+  
+    .about-section {
+      max-width: 100%; /* Use full width on mobile */
+    }
+  
+    #why-us {
+      margin-top: 20px; /* Adjust margin for smaller screens */
+    }
+  }
+  

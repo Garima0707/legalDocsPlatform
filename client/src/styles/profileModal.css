@@ -1,0 +1,82 @@
+/* Modal Overlay */
+.profileModal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark background with transparency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure the modal is above all other content */
+  }
+  
+  /* Modal Content */
+  .profileModal-content {
+    background-color: #0D1F2D;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+    color: #fff;
+  }
+  
+  /* Close Button */
+  .close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.2s ease;
+  }
+  
+  .close-button:hover {
+    color: #ff5555;
+  }
+  
+  /* User Profile Text */
+  h2 {
+    margin-top: 0;
+    color: #fff;
+  }
+  
+  p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #c78787; 
+  }
+  
+  strong {
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  /* Profile Picture */
+  img {
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  
+  .nickname {
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .name {
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .mail {
+    font-size: 20px;
+    color: #fff;
+  }
