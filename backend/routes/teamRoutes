@@ -1,0 +1,42 @@
+const express = require("express");
+const Team = require("../models/Team");
+const User = require("../models/Users");
+
+const router = express.Router();
+
+// Get all teams for a user
+router.get("/", async (req, res) => {
+  try {
+    const teams = await Team.find().populate("teamHead").populate("members");
+    res.status(200).json(teams);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Error fetching teams" });
+  }
+});
+
+// Assign roles within a team (for team head only)
+router.put("/assignRole/:teamId", async (req, res) => {
+  const { teamId } = req.params;
+  const { userId, role } = req.body;
+
+  try {
+    // Check if user is the team head
+    const team = await Team.findById(teamId);
+    if (team.teamHead.toString() !== userId) {
+      return res.status(403).json({ message: "You are not authorized to assign roles" });
+    }
+
+    // Update role of the user
+    const user = await User.findById(userId);
+    user.role = role;
+    await user.save();
+
+    res.status(200).json({ message: "Role assigned successfully!" });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ message: "Error assigning role" });
+  }
+});
+
+module.exports = router;
