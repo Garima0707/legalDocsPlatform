@@ -46,3 +46,5 @@ API Testing: Postman for backend API testing
 Frontend Testing: React Testing Library
 
 Version Control: Git and GitHub for repository management
+
+![Screenshot 2025-01-16 205159](https://github.com/user-attachments/assets/cb7ad8f3-7acf-4c49-b3e6-2a7a8e29fde5)
