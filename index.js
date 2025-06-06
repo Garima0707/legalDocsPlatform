@@ -8,8 +8,8 @@ import { Auth0Provider } from "@auth0/auth0-react";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 // Replace these with your actual Auth0 domain and client ID
-const domain = process.env.REACT_APP_AUTH0_DOMAIN;
-const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
+const domain = "secure-docs.us.auth0.com";
+const clientId = "N2Bp6rpRw2KK016Zpyhu9sH25mW1fwhf";
 
 root.render(
   <React.StrictMode>
